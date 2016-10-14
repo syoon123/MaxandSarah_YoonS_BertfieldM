@@ -19,8 +19,9 @@ d2=csv.DictReader(gObj)
 
 def gts(dict):
     for k in dict:
-        ret = "INSERT INTO students (" + "'" + k['name'] + "'" + "," + "'" + k['age'] + "'"+ "," + "'"+ k['id']+ "'"  + ")"
-        c.execute(ret)
+        ret = ""  + "'" + k['name'] + "'" + "," + "'" + k['age'] + "'"+ "," + "'"+ k['id']+ "'"
+        q = "INSERT INTO students (" + ret + ")"
+        c.execute(q)
 
 q = "CREATE TABLE students (name TEXT, id INTEGER)"
 c.execute(q)    #run SQL query

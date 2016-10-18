@@ -29,7 +29,7 @@ gts(d1)
 
 def gtc(dict):
     for k in dict:
-        ret = "INSERT INTO courses VALUES(" + "'" +  k['code'] + "'" + "," + "'"  + k['mark'] + "'"+ "," + "'" + k['id'] + "'" + ")"
+        ret = "INSERT INTO courses VALUES(" + "'" +  k['code'] + "'" + "," + "'"  + k['id'] + "'"+ "," + "'" + k['mark'] + "'" + ")"
         c.execute(ret)
 
 q = "CREATE TABLE courses (code TEXT, id INTEGER, mark INTEGER)"
